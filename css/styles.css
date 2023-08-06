@@ -337,6 +337,7 @@ a {
 }
 .projects-list li:hover {
   box-shadow: var(--portfolio-shadow);
+  cursor: pointer;
 }
 .project-name {
   color: var(--dark);
@@ -408,6 +409,7 @@ a {
 
 .team-social-icons svg:hover {
   --color1: var(--link-active);
+  cursor: pointer;
 }
 
 .team-social-icons li {
@@ -428,6 +430,7 @@ a {
 .customers svg:hover {
   --color3: var(--link-active);
   border: 1px solid var(--link-active);
+  cursor: pointer;
 }
 
 .footer-wrapper {
@@ -456,4 +459,5 @@ a {
 
 .footer-social-icons svg:hover {
   --color1: var(--success);
+  cursor: pointer;
 }
