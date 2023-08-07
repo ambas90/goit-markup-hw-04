@@ -179,7 +179,6 @@ a {
 .hero-button:focus {
   background-color: var(--link-active);
 }
-
 .feature-list {
   display: flex;
   gap: 24px;
@@ -335,10 +334,15 @@ a {
   margin: 0;
   padding: 0;
 }
-.projects-list li:hover {
-  box-shadow: var(--portfolio-shadow);
-  cursor: pointer;
+
+.project-card {
+  display: block;
 }
+.project-card:focus,
+.project-card:hover {
+  box-shadow: var(--portfolio-shadow);
+}
+
 .project-name {
   color: var(--dark);
   font-size: 20px;
@@ -392,12 +396,13 @@ a {
 }
 
 .feature-icon {
-  box-sizing: content-box;
   background-color: var(--light);
   width: 100%;
   border-radius: 4px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .team-social-icons {
@@ -407,30 +412,27 @@ a {
   justify-content: center;
 }
 
-.team-social-icons svg:hover {
-  --color1: var(--link-active);
-  cursor: pointer;
-}
-
-.team-social-icons li {
-  height: 40px;
-}
-
 .customers {
   display: flex;
   gap: 24px;
   justify-content: center;
 }
 
-.customers svg {
+.customer-icon {
   border: 1px solid var(--light-slate);
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 88px;
+  fill: var(--light-slate);
 }
 
-.customers svg:hover {
-  --color3: var(--link-active);
-  border: 1px solid var(--link-active);
-  cursor: pointer;
+.customer-icon:hover,
+.customer-icon:focus {
+  border-color: var(--link-active);
+  fill: var(--link-active);
 }
 
 .footer-wrapper {
@@ -444,20 +446,41 @@ a {
 
 .footer-social-icons {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   margin-top: 16px;
   justify-content: center;
-}
-
-.footer-social-icons li {
-  height: 40px;
 }
 
 .footer-social {
   margin-left: 120px;
 }
 
-.footer-social-icons svg:hover {
-  --color1: var(--success);
-  cursor: pointer;
+.social-icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-brand);
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  background-color: var(--link-active);
+}
+
+.social-icon-footer {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-brand);
+}
+
+.social-icon-footer:hover,
+.social-icon-footer:focus {
+  background-color: var(--success);
 }
